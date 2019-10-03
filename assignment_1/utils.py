@@ -30,7 +30,6 @@ def tensor_mult(a, # n_1 x n_2 x ... x n_d tensor
     d_b = b.ndim
     #bring the relevant dimensions to the front
     missing_a = [i for i in range(d_a) if i not in a_dims]
-    print(missing_a)
     new_order_a = a_dims + missing_a
     a_t = np.transpose(a, tuple(new_order_a))
     missing_b = [i for i in range(d_b) if i not in b_dims]
